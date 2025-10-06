@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ElectroStore — Responsive Bootstrap Showcase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-body-tertiary">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" aria-label="Основная навигация">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-semibold" href="blog.html">ElectroStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2 ms-lg-4 pt-3 pt-lg-0">
+                    <a class="btn btn-outline-light" href="cart.html">Корзина</a>
+                    <a class="btn btn-primary" href="checkout.html">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="hero-section py-5 text-white">
+        <div class="container">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6">
+                    <span class="badge text-bg-light text-primary-emphasis mb-3">Done with love by Abylaikhan</span>
+                    <h1 class="display-5 fw-bold responsive-heading">Интернет-магазин электроники будущего</h1>
+                    <p class="lead mb-4">Выбирайте гаджеты для работы и удовольствия в одном месте. Используем современный Bootstrap 5, чтобы сайт выглядел отлично на любом устройстве.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a class="btn btn-primary btn-lg" href="products.html">Перейти в каталог</a>
+                        <a class="btn btn-outline-light btn-lg" href="contact.html">Запросить консультацию</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-lg">
+                        <img src="vr.jpg" class="w-100 h-100 object-fit-cover" alt="Посетитель магазина тестирует VR-шлем">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge text-bg-primary mb-2">Bootstrap Grid Layout</span>
+                <h2 class="fw-semibold">Популярные устройства</h2>
+                <p class="text-muted">Карточки продуктов используют Bootstrap cards и сетку с управлением колонками для разных экранов.</p>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="iphonex.jpg" class="card-img-top" alt="Смартфон Pro X">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Смартфон Pro X</h3>
+                            <p class="card-text text-muted flex-grow-1">Флагман с камерой 108 Мп и поддержкой 5G. Работает до 48 часов от батареи.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-5 text-primary">75 000 ₽</span>
+                                <div class="btn-group" role="group" aria-label="Быстрые действия">
+                                    <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                                    <a href="cart.html" class="btn btn-sm btn-primary">Купить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="laptop..jpg" class="card-img-top" alt="Ноутбук UltraBook 15">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Ноутбук UltraBook 15</h3>
+                            <p class="card-text text-muted flex-grow-1">Экран 15" с частотой 120 Гц, алюминиевый корпус и до 12 часов автономной работы.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-5 text-primary">120 000 ₽</span>
+                                <div class="btn-group" role="group" aria-label="Быстрые действия">
+                                    <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                                    <a href="cart.html" class="btn btn-sm btn-primary">Купить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="yanss.jpg" class="card-img-top" alt="Наушники SoundWave">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Наушники SoundWave</h3>
+                            <p class="card-text text-muted flex-grow-1">Активное шумоподавление, поддержка беспроводной зарядки и до 30 часов музыки.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-5 text-primary">15 000 ₽</span>
+                                <div class="btn-group" role="group" aria-label="Быстрые действия">
+                                    <a href="product-detail.html" class="btn btn-sm btn-outline-primary">Подробнее</a>
+                                    <a href="cart.html" class="btn btn-sm btn-primary">Купить</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-12 col-lg-6">
+                    <div class="p-4 p-md-5 bg-white shadow-sm rounded-4 h-100">
+                        <span class="badge text-bg-secondary mb-3">Custom Grid Content</span>
+                        <h2 class="h3 fw-semibold">Адаптивный центр контроля</h2>
+                        <p class="text-muted">Используем сетку Bootstrap: слева располагается основное содержимое, справа — тематические блоки. На мобильных устройствах секции складываются в одну колонку.</p>
+                        <ul class="list-unstyled vstack gap-2 small text-muted">
+                            <li class="d-flex align-items-center gap-2"><span class="dot"></span>Контролируйте остатки на складе в реальном времени.</li>
+                            <li class="d-flex align-items-center gap-2"><span class="dot"></span>Получайте рекомендации, основанные на поведении клиентов.</li>
+                            <li class="d-flex align-items-center gap-2"><span class="dot"></span>Настраивайте маркетинговые кампании с помощью кнопок Bootstrap.</li>
+                        </ul>
+                        <a class="btn btn-primary mt-3" href="gallery.html">Открыть примеры интерфейса</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="row g-4 h-100">
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded-4 h-100 bg-white shadow-sm">
+                                <h3 class="h5">Аналитика продаж</h3>
+                                <p class="text-muted small">Динамические графики и отчёты подстраиваются под размер экрана без дополнительного кода.</p>
+                                <a class="btn btn-outline-primary btn-sm" href="blog.html">Читать блог</a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="p-4 border rounded-4 h-100 bg-white shadow-sm">
+                                <h3 class="h5">Поддержка 24/7</h3>
+                                <p class="text-muted small">Форма обратной связи использует Bootstrap form-control для удобства клиентов.</p>
+                                <a class="btn btn-outline-primary btn-sm" href="contact.html">Связаться</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="p-4 border rounded-4 h-100 bg-white shadow-sm">
+                                <h3 class="h5">Категории</h3>
+                                <div class="row row-cols-2 row-cols-sm-4 g-3">
+                                    <div class="col"><span class="badge text-bg-primary w-100 py-2">Смартфоны</span></div>
+                                    <div class="col"><span class="badge text-bg-primary w-100 py-2">Ноутбуки</span></div>
+                                    <div class="col"><span class="badge text-bg-primary w-100 py-2">Аксессуары</span></div>
+                                    <div class="col"><span class="badge text-bg-primary w-100 py-2">Умный дом</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="badge text-bg-light text-dark mb-2">Bootstrap Carousel</span>
+                <h2 class="fw-semibold">Витрина новых технологий</h2>
+                <p class="text-white-50 mb-0">Карусель содержит девять изображений с управлением индикаторами и адаптивной высотой.</p>
+            </div>
+            <div id="storeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Слайд 1"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="1" aria-label="Слайд 2"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="2" aria-label="Слайд 3"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="3" aria-label="Слайд 4"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="4" aria-label="Слайд 5"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="5" aria-label="Слайд 6"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="6" aria-label="Слайд 7"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="7" aria-label="Слайд 8"></button>
+                    <button type="button" data-bs-target="#storeCarousel" data-bs-slide-to="8" aria-label="Слайд 9"></button>
+                </div>
+                <div class="carousel-inner rounded-4 overflow-hidden shadow-lg">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro1/1200/600" class="d-block w-100" alt="Гаджеты на современном столе">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Рабочее пространство</h3>
+                            <p>Комбинируем ноутбук и аксессуары для продуктивности.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro2/1200/600" class="d-block w-100" alt="Смартфон крупным планом">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Мобильные решения</h3>
+                            <p>Современные дисплеи с высоким разрешением и 5G.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro3/1200/600" class="d-block w-100" alt="Наушники на деревянном столе">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Звук без компромиссов</h3>
+                            <p>Наслаждайтесь любимой музыкой с ANC.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro4/1200/600" class="d-block w-100" alt="Игровая приставка и контроллеры">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Игровая зона</h3>
+                            <p>Консоли нового поколения и аксессуары.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro5/1200/600" class="d-block w-100" alt="Умные часы на руке">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Умные часы</h3>
+                            <p>Следите за здоровьем с помощью сенсоров и приложений.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro6/1200/600" class="d-block w-100" alt="Аксессуары для фото и видео">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Контент-мейкинг</h3>
+                            <p>Комплекты для блогеров и видеографов.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro7/1200/600" class="d-block w-100" alt="Команда в VR-гарнитурах">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Виртуальная реальность</h3>
+                            <p>Погружение в новые миры с высокой частотой кадров.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro8/1200/600" class="d-block w-100" alt="Домашние автоматизации">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Умный дом</h3>
+                            <p>Датчики, лампы и камеры для безопасности жилья.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="https://picsum.photos/seed/electro9/1200/600" class="d-block w-100" alt="Инженер тестирует микросхемы">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>Инновации</h3>
+                            <p>Исследуем новые технологии и делимся итогами в блоге.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#storeCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#storeCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-lg-6">
+                    <div class="p-4 p-md-5 bg-white shadow-sm rounded-4 h-100">
+                        <h2 class="h3 fw-semibold mb-3">Подписка на новости</h2>
+                        <p class="text-muted">Используем Bootstrap form-control, чтобы форма была удобной и доступной. Попробуйте подписаться на еженедельный дайджест новостей.</p>
+                        <form class="row g-3" aria-label="Форма подписки на новости">
+                            <div class="col-12 col-md-6">
+                                <label for="subscribeName" class="form-label">Имя</label>
+                                <input type="text" class="form-control" id="subscribeName" placeholder="Аян" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="subscribeEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="subscribeEmail" placeholder="name@example.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="interest" class="form-label">Категория интереса</label>
+                                <select id="interest" class="form-select" required>
+                                    <option value="" selected disabled>Выберите направление</option>
+                                    <option value="smartphones">Смартфоны</option>
+                                    <option value="laptops">Ноутбуки</option>
+                                    <option value="accessories">Аксессуары</option>
+                                    <option value="smart-home">Умный дом</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="policy" required>
+                                    <label class="form-check-label" for="policy">
+                                        Я согласен с политикой конфиденциальности и хочу получать рассылку.
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 d-grid d-sm-flex gap-3">
+                                <button type="submit" class="btn btn-primary">Подписаться</button>
+                                <button type="reset" class="btn btn-outline-secondary">Очистить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="h-100 p-4 p-md-5 bg-white shadow-sm rounded-4">
+                        <h2 class="h3 fw-semibold mb-3">Зачем подключаться?</h2>
+                        <p class="text-muted">Форма демонстрирует утилиты отступов Bootstrap и поддерживает доступность: метки связаны с полями, а чекбокс сопровождается описанием.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Скидки на новые поступления каждую неделю</li>
+                            <li class="list-group-item">Подборки техник для учебных проектов</li>
+                            <li class="list-group-item">Ссылки на наш блог с адаптивной типографикой</li>
+                        </ul>
+                        <a class="btn btn-link mt-3 px-0" href="blog.html">Читать последние статьи</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0">© 2025 ElectroStore. Все права защищены.</p>
+        <p class="mb-0">Команда: Mirzan Mysyrgaliev</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-p8AwQ7P7B6AEZrum1+qsSVqS+8CA0nVddO+jXS6AMDttuPAHyBs+K6TfGsDz94bQ" crossorigin="anonymous"></script>
+</body>
+</html>

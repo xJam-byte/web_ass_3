@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Контакты — ElectroStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-body-tertiary">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" aria-label="Основная навигация">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-semibold" href="blog.html">ElectroStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Контакты</a></li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2 ms-lg-4 pt-3 pt-lg-0">
+                    <a class="btn btn-outline-light" href="cart.html">Корзина</a>
+                    <a class="btn btn-primary" href="checkout.html">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="py-5">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-12 col-lg-5">
+                    <span class="badge text-bg-primary mb-3">Связаться с нами</span>
+                    <h1 class="fw-semibold mb-3">Напишите команде ElectroStore</h1>
+                    <p class="text-muted">Мы отвечаем в течение рабочего дня и помогаем подобрать технику, сравнить характеристики и оформить доставку.</p>
+                    <div class="list-group list-group-flush mt-4">
+                        <div class="list-group-item bg-transparent px-0">
+                            <h2 class="h6 mb-1">Телефон</h2>
+                            <a href="tel:+77001234567" class="link-primary">+7 700 123 45 67</a>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h2 class="h6 mb-1">Email</h2>
+                            <a href="mailto:hello@electrostore.kz" class="link-primary">hello@electrostore.kz</a>
+                        </div>
+                        <div class="list-group-item bg-transparent px-0">
+                            <h2 class="h6 mb-1">Адрес шоурума</h2>
+                            <p class="mb-0 text-muted">г. Астана, проспект Дружбы 45, БЦ «Digital Hub»</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h4 fw-semibold mb-3">Форма обратной связи</h2>
+                            <form class="row g-3" aria-label="Форма обратной связи">
+                                <div class="col-md-6">
+                                    <label for="contactName" class="form-label">Имя</label>
+                                    <input type="text" class="form-control" id="contactName" placeholder="Айгерим" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="contactEmail" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="contactEmail" placeholder="name@example.com" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contactTopic" class="form-label">Тема обращения</label>
+                                    <select id="contactTopic" class="form-select" required>
+                                        <option value="" selected disabled>Выберите тему</option>
+                                        <option value="consultation">Консультация по выбору</option>
+                                        <option value="order">Вопрос по заказу</option>
+                                        <option value="service">Сервис и гарантия</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="contactMessage" class="form-label">Сообщение</label>
+                                    <textarea id="contactMessage" class="form-control" rows="4" placeholder="Расскажите, что вам нужно" required></textarea>
+                                </div>
+                                <div class="col-12 form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="contactPolicy" required>
+                                    <label class="form-check-label" for="contactPolicy">Я согласен на обработку персональных данных.</label>
+                                </div>
+                                <div class="col-12 d-grid d-sm-flex gap-3">
+                                    <button type="submit" class="btn btn-primary">Отправить</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Очистить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0">© 2025 ElectroStore. Контакты.</p>
+        <p class="mb-0">Команда: Mirzan Mysyrgaliev</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-p8AwQ7P7B6AEZrum1+qsSVqS+8CA0nVddO+jXS6AMDttuPAHyBs+K6TfGsDz94bQ" crossorigin="anonymous"></script>
+</body>
+</html>

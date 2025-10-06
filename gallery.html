@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Галерея — ElectroStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-body-tertiary">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" aria-label="Основная навигация">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-semibold" href="blog.html">ElectroStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2 ms-lg-4 pt-3 pt-lg-0">
+                    <a class="btn btn-outline-light" href="cart.html">Корзина</a>
+                    <a class="btn btn-primary" href="checkout.html">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="badge text-bg-primary mb-2">Галерея</span>
+                <h1 class="fw-semibold">Визуальные истории ElectroStore</h1>
+                <p class="text-muted">Коллекция фотографий демонстрирует технику, которую мы тестируем. Bootstrap Grid помогает адаптировать галерею под любой экран.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
+                        <img src="https://picsum.photos/seed/gallery1/800/600" class="w-100 object-fit-cover" alt="Ноутбук на рабочем столе">
+                        <figcaption class="p-3 bg-white">Рабочее место разработчика</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
+                        <img src="игра.jpg" class="w-100 object-fit-cover" alt="Игровая приставка с контроллерами">
+                        <figcaption class="p-3 bg-white">Игровая зона с подсветкой</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
+                        <img src="аксессуар.jpg" class="w-100 object-fit-cover" alt="Умные часы на руке">
+                        <figcaption class="p-3 bg-white">Умные аксессуары для спорта</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
+                        <img src="вроче.jpg" class="w-100 object-fit-cover" alt="Виртуальная реальность">
+                        <figcaption class="p-3 bg-white">Тестируем VR-шлемы</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
+                        <img src="https://picsum.photos/seed/gallery5/800/600" class="w-100 object-fit-cover" alt="Планшет на столе">
+                        <figcaption class="p-3 bg-white">Гибриды для творчества</figcaption>
+                    </figure>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
+                        <img src="камера.jpg" class="w-100 object-fit-cover" alt="Пользователь тестирует смартфон">
+                        <figcaption class="p-3 bg-white">Тесты камер и автономности</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0">© 2025 ElectroStore. Галерея.</p>
+        <p class="mb-0">Команда: Mirzan Mysyrgaliev</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-p8AwQ7P7B6AEZrum1+qsSVqS+8CA0nVddO+jXS6AMDttuPAHyBs+K6TfGsDz94bQ" crossorigin="anonymous"></script>
+</body>
+</html>

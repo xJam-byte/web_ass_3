@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Каталог устройств — ElectroStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-body-tertiary">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" aria-label="Основная навигация">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-semibold" href="blog.html">ElectroStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключатель навигации">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="products.html">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
+                </ul>
+                <div class="d-flex flex-wrap gap-2 ms-lg-4 pt-3 pt-lg-0">
+                    <a class="btn btn-outline-light" href="cart.html">Корзина</a>
+                    <a class="btn btn-primary" href="checkout.html">Оформить заказ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="py-5">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3 mb-4">
+                <div>
+                    <span class="badge text-bg-primary mb-2">Каталог</span>
+                    <h1 class="h2 fw-semibold mb-0">Популярные устройства</h1>
+                </div>
+                <div class="btn-group" role="group" aria-label="Фильтр категорий">
+                    <button type="button" class="btn btn-outline-primary active">Все</button>
+                    <button type="button" class="btn btn-outline-primary">Смартфоны</button>
+                    <button type="button" class="btn btn-outline-primary">Ноутбуки</button>
+                    <button type="button" class="btn btn-outline-primary">Аксессуары</button>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Ноутбук для разработчиков">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">DevBook Max 16</h2>
+                            <p class="card-text text-muted flex-grow-1">Процессор M‑серии, 32 ГБ RAM и OLED‑панель 4K. Подходит для разработки и дизайна.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-6 text-primary">185 000 ₽</span>
+                                <a class="btn btn-sm btn-primary" href="cart.html">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Смартфон с безрамочным экраном">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">EdgePhone 13</h2>
+                            <p class="card-text text-muted flex-grow-1">Безрамочный экран 6.7", 120 Гц, двойная камера 64 Мп и быстрая зарядка 65 Вт.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-6 text-primary">89 900 ₽</span>
+                                <a class="btn btn-sm btn-primary" href="cart.html">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Беспроводные наушники">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">AirBeats Studio</h2>
+                            <p class="card-text text-muted flex-grow-1">Объёмный звук с режимом кинотеатра, Bluetooth 5.3 и автономность до 36 часов.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-6 text-primary">24 500 ₽</span>
+                                <a class="btn btn-sm btn-primary" href="cart.html">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Игровая консоль">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">GameSphere X</h2>
+                            <p class="card-text text-muted flex-grow-1">Консоль нового поколения с поддержкой 8K и трассировкой лучей. Полный комплект контроллеров.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-6 text-primary">150 000 ₽</span>
+                                <a class="btn btn-sm btn-primary" href="cart.html">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Умные часы">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">PulseWatch S</h2>
+                            <p class="card-text text-muted flex-grow-1">Отслеживание сна, пульса, уровня кислорода, режим тренера и NFC-платежи.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-6 text-primary">32 990 ₽</span>
+                                <a class="btn btn-sm btn-primary" href="cart.html">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1600181954320-6dcb2a06f9aa?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Комплект умного дома">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">Smart Home Kit</h2>
+                            <p class="card-text text-muted flex-grow-1">Датчики движения, камеры и умные лампы. Управление через приложение и голосовых ассистентов.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-semibold fs-6 text-primary">45 500 ₽</span>
+                                <a class="btn btn-sm btn-primary" href="cart.html">В корзину</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title h5">Подбор по параметрам</h2>
+                            <p class="text-muted">Быстро находите технику с нужными характеристиками.</p>
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action active">Игровые решения</button>
+                                <button type="button" class="list-group-item list-group-item-action">Для учёбы</button>
+                                <button type="button" class="list-group-item list-group-item-action">Для контента</button>
+                                <button type="button" class="list-group-item list-group-item-action">До 50 000 ₽</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h2 class="card-title h5">Сравнение моделей</h2>
+                            <p class="text-muted">Таблица цен и основных параметров автоматически адаптируется под ширину экрана благодаря сетке Bootstrap.</p>
+                            <div class="table-responsive">
+                                <table class="table align-middle">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Модель</th>
+                                            <th scope="col">Категория</th>
+                                            <th scope="col">Память</th>
+                                            <th scope="col">Цена</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">DevBook Max 16</th>
+                                            <td>Ноутбуки</td>
+                                            <td>32 ГБ RAM</td>
+                                            <td>185 000 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">EdgePhone 13</th>
+                                            <td>Смартфоны</td>
+                                            <td>512 ГБ</td>
+                                            <td>89 900 ₽</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Smart Home Kit</th>
+                                            <td>Умный дом</td>
+                                            <td>Комплект 6 устройств</td>
+                                            <td>45 500 ₽</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <a class="btn btn-primary" href="contact.html">Нужна помощь с выбором</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <p class="mb-0">© 2025 ElectroStore. Каталог устройств.</p>
+        <p class="mb-0">Команда: Mirzan Mysyrgaliev</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-p8AwQ7P7B6AEZrum1+qsSVqS+8CA0nVddO+jXS6AMDttuPAHyBs+K6TfGsDz94bQ" crossorigin="anonymous"></script>
+</body>
+</html>

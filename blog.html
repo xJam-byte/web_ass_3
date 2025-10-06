@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог ElectroStore — Media Queries Showcase</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="blog-page">
+<header class="blog-nav">
+    <div class="blog-navbar">
+        <a class="blog-brand" href="blog.html">ElectroStore</a>
+        <nav aria-label="Навигация блога">
+            <ul class="blog-links">
+                <li><a class="blog-active" href="blog.html">Блог</a></li>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="products.html">Каталог</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="blog-main blog-typography">
+    <section class="blog-hero" aria-labelledby="blogTitle">
+        <span class="blog-badge">Новости и обзоры</span>
+        <h1 id="blogTitle">Блог ElectroStore</h1>
+        <p>Делимся лайфхаками по выбору техники, показываем лучшие практики Bootstrap и рассказываем, как медиазапросы помогают создавать адаптивные интерфейсы.</p>
+        <p>Прокрутите вниз, чтобы увидеть сетку карточек: на десктопе она состоит из трёх колонок, на планшете — из двух, а на мобильных устройствах карточки выстраиваются вертикально.</p>
+    </section>
+
+    <section aria-labelledby="latestPosts">
+        <h2 id="latestPosts" class="visually-hidden">Последние публикации</h2>
+        <div class="blog-card-grid" role="list">
+            <article class="blog-card" role="listitem">
+                <p class="blog-meta">22.09.2025 · 6 минут</p>
+                <h2>Как выбрать идеальный смартфон в 2025 году</h2>
+                <p>Чек-лист характеристик: частота обновления экрана, объём оперативной памяти, качество камеры и гарантии обновлений ОС. Добавили таблицу сравнения моделей.</p>
+                <a href="#">Читать далее</a>
+            </article>
+            <article class="blog-card" role="listitem">
+                <p class="blog-meta">15.09.2025 · 4 минуты</p>
+                <h2>Совмещение Bootstrap и медиа-запросов</h2>
+                <p>Рассказываем, как оставить контроль над ключевыми блоками с помощью CSS, не отказываясь от преимуществ компонентной библиотеки.</p>
+                <a href="#">Перейти к статье</a>
+            </article>
+            <article class="blog-card" role="listitem">
+                <p class="blog-meta">03.09.2025 · 5 минут</p>
+                <h2>Топ-7 аксессуаров для учебного года</h2>
+                <p>От умных блокнотов до портативных зарядных станций — собрали подборку устройств, которые помогают выполнять задания быстрее.</p>
+                <a href="#">Открыть подборку</a>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="blog-footer">
+    <p>© 2025 ElectroStore · Mirzan Mysyrgaliev</p>
+    <p>Страница демонстрирует медиазапросы: меняйте ширину окна, чтобы увидеть адаптивную типографику и перестройку сетки.</p>
+</footer>
+</body>
+</html>
