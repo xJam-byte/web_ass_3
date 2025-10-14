@@ -31,15 +31,16 @@
         </div>
     </nav>
 </header>
+<button id="themeBtn" class="btn btn-outline-warning" style="font-size: 24px;">🌞</button>
 
 <main>
     <section class="py-5">
         <div class="container">
             <div class="row gy-4 align-items-center">
                 <div class="col-lg-6">
-                    <span class="badge text-bg-primary mb-3">Команда ElectroStore</span>
+                    <span class="badge text-bg-primary mb-3">Abzal's page</span>
                     <h1 class="fw-semibold mb-3">Мы делаем технологии ближе и понятнее</h1>
-                    <p class="lead text-muted">С 2017 года мы подбираем технику для работы, обучения и развлечений. Тестируем устройства, составляем сравнения и создаём понятные интерфейсы на Bootstrap 5.</p>
+                    <p class="lead text-muted">С 2017 года мы подбираем технику для работы, обучения и развлечений.Тестируем устройства, составляем сравнения и создаём понятные интерфейсы.</p>
                     <div class="row g-3 mt-4">
                         <div class="col-sm-6">
                             <div class="p-3 border rounded-4 bg-white shadow-sm h-100">
@@ -57,7 +58,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="position-relative rounded-4 overflow-hidden shadow-lg">
-                        <img src="комп.jpg" class="w-100 object-fit-cover" alt="Команда ElectroStore обсуждает стратегию">
+                        <img src="╨║╨╛╨╝╨┐.jpg" class="w-100 object-fit-cover" alt="просто фото">
                     </div>
                 </div>
             </div>
@@ -100,6 +101,17 @@
         </div>
     </section>
 </main>
+<h2>Частые вопросы:</h2>
+<button class="accordion">Что такое ElectroStore?</button>
+<div class="panel">
+  <p>Интернет-магазин электроники будущего
+Выбирайте гаджеты для работы и удовольствия в одном месте.</p>
+</div>
+<button class="accordion">Срок доставки</button>
+<div class="panel">
+  <p>4-7 дней</p>
+</div>
+
 
 <footer class="bg-dark text-white py-4">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
@@ -108,6 +120,41 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-p8AwQ7P7B6AEZrum1+qsSVqS+8CA0nVddO+jXS6AMDttuPAHyBs+K6TfGsDz94bQ" crossorigin="anonymous"></script>
+<script>
+const accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+
+    const panel = btn.nextElementSibling;
+
+    if (panel.style.display === "block") {
+      panel.style.display = "none";   // закрыть, если открыта
+    } else {
+      panel.style.display = "block";  // открыть, если закрыта
+    }
+  });
+});
+</script><script>
+let isLight = true;
+
+function changeTheme() {
+  const body = document.body;
+  const btn = document.getElementById("themeBtn");
+  const color = isLight ? "#1e1e1e" : "#ffffff";  
+  const text = isLight ? "#ffffff" : "#000000";   
+  const icon = isLight ? "🌙" : "🌞";              
+
+  body.style.setProperty("background-color", color, "important");
+  body.style.setProperty("color", text, "important");
+
+  btn.textContent = icon;
+  isLight = !isLight;
+}
+
+document.getElementById("themeBtn").addEventListener("click", changeTheme);
+</script>
 </body>
 </html>

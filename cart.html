@@ -31,6 +31,18 @@
         </div>
     </nav>
 </header>
+<button id="themeBtn" class="btn btn-outline-warning" style="font-size: 24px;">🌞</button>
+
+
+<script>
+function updateDateTime() {
+  const now = new Date();
+  document.getElementById("datetime").textContent = now.toLocaleString();
+}
+
+setInterval(updateDateTime, 1000); 
+updateDateTime();
+</script>
 
 <main>
     <section class="py-5">
@@ -54,42 +66,42 @@
                                         <tr>
                                             <td>
                                                 <div class="d-flex align-items-center gap-3">
-                                                    <img src="iphonex.jpg" class="rounded" width="72" height="72" alt="Смартфон Pro X">
+                                                    <img src="iphonex.jpg" class="rounded" width="302" height="72" alt="Iphone X">
                                                     <div>
-                                                        <h2 class="h6 mb-1">Смартфон Pro X</h2>
-                                                        <p class="text-muted small mb-0">Память 512 ГБ, цвет Midnight</p>
+                                                        <h2 class="h6 mb-1">Iphone X</h2>
+                                                        <p class="text-muted small mb-0">Память 64ГБ, цвет белый,состояние ляля</p>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="btn-group" role="group" aria-label="Количество смартфонов">
-                                                    <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
-                                                    <button class="btn btn-outline-secondary btn-sm" type="button" disabled>1</button>
-                                                    <button class="btn btn-outline-secondary btn-sm" type="button">+</button>
+                                                    <button class="btn btn-outline-primary btn-sm " type="button">-</button>
+                                                    <button class="btn btn-outline-primary btn-sm" type="button" disabled>1</button>
+                                                    <button class="btn btn-outline-primary btn-sm" type="button">+</button>
                                                 </div>
                                             </td>
-                                            <td class="text-end">75 000 ₽</td>
-                                            <td class="text-end">75 000 ₽</td>
+                                            <td class="text-end">72 000 тг</td>
+                                            <td class="text-end">72 000 тг</td>
                                         </tr>
                                         <tr>
                                             <td>
                                                 <div class="d-flex align-items-center gap-3">
-                                                    <img src="yanss.jpg" class="rounded" width="72" height="72" alt="Наушники SoundWave">
+                                                    <img src="yanss.jpg" class="rounded" width="302" height="72" alt="Наушники SoundWave">
                                                     <div>
                                                         <h2 class="h6 mb-1">Наушники SoundWave</h2>
-                                                        <p class="text-muted small mb-0">Цвет Arctic Blue</p>
+                                                        <p class="text-muted small mb-0">Цвет розовый,шумоподавление</p>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td class="text-center">
                                                 <div class="btn-group" role="group" aria-label="Количество наушников">
-                                                    <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
-                                                    <button class="btn btn-outline-secondary btn-sm" type="button" disabled>2</button>
-                                                    <button class="btn btn-outline-secondary btn-sm" type="button">+</button>
+                                                    <button class="btn btn-outline-primary btn-sm" type="button">-</button>
+                                                    <button class="btn btn-outline-primary btn-sm" type="button" disabled>4</button>
+                                                    <button class="btn btn-outline-primary btn-sm" type="button">+</button>
                                                 </div>
                                             </td>
-                                            <td class="text-end">15 000 ₽</td>
-                                            <td class="text-end">30 000 ₽</td>
+                                            <td class="text-end">15 000 тг</td>
+                                            <td class="text-end">30 000 тг</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -98,13 +110,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-4 ">
                     <div class="card shadow-sm">
                         <div class="card-body p-4">
                             <h2 class="h5 fw-semibold">Итог заказа</h2>
                             <div class="d-flex justify-content-between text-muted">
                                 <span>Сумма товаров</span>
-                                <span>105 000 ₽</span>
+                                <span>102 000 тг</span>
                             </div>
                             <div class="d-flex justify-content-between text-muted">
                                 <span>Доставка</span>
@@ -113,17 +125,29 @@
                             <hr>
                             <div class="d-flex justify-content-between fw-semibold fs-5">
                                 <span>Итого</span>
-                                <span>105 000 ₽</span>
+                                <span>102 000 тг</span>
                             </div>
-                            <button class="btn btn-primary w-100 mt-4" type="button" onclick="location.href='checkout.html'">Перейти к оформлению</button>
+                            <button class="btn btn-success w-100 mt-4 " type="button" onclick="location.href='checkout.html'">Перейти к оформлению</button>
                             <p class="small text-muted mt-3">При оформлении заказа можно указать промокод и выбрать удобный способ доставки.</p>
                         </div>
                     </div>
+                     <div class="col-12  col-lg-12 ">
+                                <div class="card shadow-sm, mt-4">
+                                    <div class="card-body">
+                                        <h3 class="text-center">current time</h3>
+                                        <p class="text-center" id="datetime"></p>
+                                    </div>
+                                </div>   
+                            </div>
+                     
                 </div>
             </div>
         </div>
+       
+</div>
     </section>
-</main>
+    </main>
+
 
 <footer class="bg-dark text-white py-4">
     <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
@@ -132,6 +156,26 @@
     </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-p8AwQ7P7B6AEZrum1+qsSVqS+8CA0nVddO+jXS6AMDttuPAHyBs+K6TfGsDz94bQ" crossorigin="anonymous"></script>
+
+<script>
+let isLight = true;
+
+function changeTheme() {
+  const body = document.body;
+  const btn = document.getElementById("themeBtn");
+  const color = isLight ? "#1e1e1e" : "#ffffff";  
+  const text = isLight ? "#ffffff" : "#000000";   
+  const icon = isLight ? "🌙" : "🌞";              
+
+  body.style.setProperty("background-color", color, "important");
+  body.style.setProperty("color", text, "important");
+
+  btn.textContent = icon;
+  isLight = !isLight;
+}
+
+document.getElementById("themeBtn").addEventListener("click", changeTheme);
+</script>
 </body>
 </html>
