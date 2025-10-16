@@ -43,25 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 
-  // --- Task 4: Change Background Color ---
-  const colorChanger = document.getElementById("color-changer");
+  // Находим кнопку-переключатель
+  const themeChanger = document.getElementById("color-changer");
+  // Находим корневой элемент <html>
+  const htmlElement = document.documentElement;
 
-  // Check if the color changer button exists on the page
-  if (colorChanger) {
-    // A predefined list of background colors to cycle through
-    const colors = ["#f8f9fa", "#e9ecef", "#6c757d", "#495057", "#343a40"];
-    const body = document.body;
-    let currentIndex = 0;
-
-    // Add a click event listener to the button
-    colorChanger.addEventListener("click", () => {
-      // Move to the next color in the array, looping back to the start if at the end
-      currentIndex = (currentIndex + 1) % colors.length;
-      body.style.transition = "background-color 0.5s ease"; // Add a smooth transition
-      body.style.backgroundColor = colors[currentIndex]; // Apply the new color
+  // Проверяем, что кнопка существует
+  if (themeChanger) {
+    // Добавляем обработчик клика
+    themeChanger.addEventListener("click", () => {
+      // Проверяем текущую тему
+      if (htmlElement.getAttribute("data-bs-theme") === "dark") {
+        // Если тема темная, меняем на светлую
+        htmlElement.setAttribute("data-bs-theme", "light");
+      } else {
+        // Иначе — меняем на темную
+        htmlElement.setAttribute("data-bs-theme", "dark");
+      }
     });
   }
 
+  // (остальной твой код для валидации формы и т.д. может оставаться здесь)
   // --- Task 5: Display Current Date and Time ---
   const datetimeElement = document.getElementById("datetime");
 
@@ -86,3 +88,75 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(updateDateTime, 1000 * 60);
   }
 });
+
+document.querySelectorAll(".blog-card h2").forEach((t) => {
+  t.addEventListener("click", () => {
+    const p = t.nextElementSibling;
+    p.style.display = p.style.display === "none" ? "block" : "none";
+  });
+});
+
+// const bg = document.createElement("button");
+// bg.textContent = "Фон";
+// Object.assign(bg.style, { position: "fixed", bottom: "20px", right: "20px" });
+// document.body.append(bg);
+// const c = ["#f0f8ff", "#fff3e0", "#e0f7fa", "#fce4ec"],
+//   i = { v: 0 };
+// bg.onclick = () => {
+//   document.body.style.background = c[i.v++ % c.length];
+// };
+
+const d = document.createElement("div");
+Object.assign(d.style, {
+  position: "fixed",
+  bottom: "10px",
+  left: "50%",
+  transform: "translateX(-50%)",
+  background: "rgba(0,0,0,0.6)",
+  color: "#fff",
+  padding: "4px 8px",
+  borderRadius: "6px",
+});
+document.body.append(d);
+setInterval(() => (d.textContent = new Date().toLocaleString("ru-RU")), 1000);
+
+const p = document.createElement("div");
+Object.assign(p.style, {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  width: "100%",
+  height: "100%",
+  display: "none",
+  alignItems: "center",
+  justifyContent: "center",
+  background: "rgba(0,0,0,0.6)",
+});
+p.innerHTML = `<div style="background:white;padding:20px;border-radius:10px;text-align:center;">
+  <h3>Подписка</h3><input type="email" placeholder="Ваш email"><br><br>
+  <button id="c">Закрыть</button></div>`;
+document.body.append(p);
+const b = document.createElement("button");
+b.textContent = "Подписаться";
+Object.assign(b.style, { position: "fixed", bottom: "20px", left: "20px" });
+document.body.append(b);
+b.onclick = () => (p.style.display = "flex");
+p.querySelector("#c").onclick = () => (p.style.display = "none");
+
+let isLight = true;
+
+function changeTheme() {
+  const body = document.body;
+  const btn = document.getElementById("themeBtn");
+  const color = isLight ? "#080669ff" : "#ffffff";
+  const text = isLight ? "#ffffff" : "#080669ff";
+  const icon = isLight ? "темная тема" : "светлая тема";
+
+  body.style.setProperty("background-color", color, "important");
+  body.style.setProperty("color", text, "important");
+
+  btn.textContent = icon;
+  isLight = !isLight;
+}
+
+document.getElementById("themeBtn").addEventListener("click", changeTheme);
