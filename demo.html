@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ElectroStore — Демонстрация функций</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-body-tertiary">
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-semibold" href="index.html">ElectroStore</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="demo.html">Демо функций</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="container py-5">
+        <div class="text-center mb-5">
+            <h1 class="display-4 fw-bold mb-3">Демонстрация всех функций</h1>
+            <p class="lead">Полный набор интерактивных возможностей веб-приложения</p>
+        </div>
+
+        <!-- DOM Manipulation Demo -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">1. DOM Манипуляции</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Изменение контента</h5>
+                            <p id="dynamicText">Этот текст можно изменить</p>
+                            <button class="btn btn-primary" onclick="changeText()">Изменить текст</button>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Изменение стилей</h5>
+                            <div id="styleBox" class="p-3 bg-light border rounded">
+                                <p>Нажмите кнопку, чтобы изменить стили</p>
+                            </div>
+                            <button class="btn btn-success mt-2" onclick="changeStyles()">Изменить стили</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Handling Demo -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">2. Обработка событий</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Кнопки</h5>
+                            <button class="btn btn-primary" id="clickCounter">Кликов: 0</button>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Клавиатура</h5>
+                            <input type="text" class="form-control" id="keyboardInput" placeholder="Нажмите любую клавишу">
+                            <small class="text-muted">Последняя клавиша: <span id="lastKey">-</span></small>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Switch Statement</h5>
+                            <select class="form-select" id="actionSelect">
+                                <option value="">Выберите действие</option>
+                                <option value="success">Успех</option>
+                                <option value="warning">Предупреждение</option>
+                                <option value="error">Ошибка</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced JS Demo -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">3. Продвинутый JavaScript</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Объекты и методы</h5>
+                            <button class="btn btn-info" onclick="showProductStats()">Показать статистику товаров</button>
+                            <div id="productStats" class="mt-3"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Высшие функции</h5>
+                            <button class="btn btn-warning" onclick="demonstrateHigherOrder()">Демонстрация</button>
+                            <div id="higherOrderDemo" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animations Demo -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">4. Анимации</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary w-100" onclick="animateElement('fadeIn')">Fade In</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success w-100" onclick="animateElement('slideInLeft')">Slide Left</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-warning w-100" onclick="animateElement('slideInRight')">Slide Right</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-danger w-100" onclick="animateElement('bounceIn')">Bounce In</button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div id="animationTarget" class="p-4 bg-primary text-white text-center rounded">
+                            <h4>Анимированный элемент</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sound Effects Demo -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">5. Звуковые эффекты</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-success w-100" onclick="playSoundEffect('success')">Успех</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-info w-100" onclick="playSoundEffect('toggle')">Переключение</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-warning w-100" onclick="playSoundEffect('click')">Клик</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-danger w-100" onclick="playSoundEffect('error')">Ошибка</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Multi-step Form Demo -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">6. Многошаговая форма</h3>
+                </div>
+                <div class="card-body">
+                    <form id="multiStepForm">
+                        <div id="step1" class="form-step">
+                            <h5>Шаг 1: Личная информация</h5>
+                            <div class="mb-3">
+                                <label class="form-label">Имя</label>
+                                <input type="text" class="form-control" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Далее</button>
+                        </div>
+                        
+                        <div id="step2" class="form-step" style="display: none;">
+                            <h5>Шаг 2: Предпочтения</h5>
+                            <div class="mb-3">
+                                <label class="form-label">Любимая категория</label>
+                                <select class="form-select" name="category">
+                                    <option value="phones">Телефоны</option>
+                                    <option value="laptops">Ноутбуки</option>
+                                    <option value="audio">Аудио</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Бюджет</label>
+                                <input type="range" class="form-range" name="budget" min="10000" max="200000" value="50000">
+                                <div class="d-flex justify-content-between">
+                                    <small>10,000 ₽</small>
+                                    <small>200,000 ₽</small>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-secondary" onclick="prevStep()">Назад</button>
+                            <button type="button" class="btn btn-primary" onclick="nextStep()">Далее</button>
+                        </div>
+                        
+                        <div id="step3" class="form-step" style="display: none;">
+                            <h5>Шаг 3: Подтверждение</h5>
+                            <div id="formSummary" class="alert alert-info"></div>
+                            <button type="button" class="btn btn-secondary" onclick="prevStep()">Назад</button>
+                            <button type="submit" class="btn btn-success">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery Demo -->
+        <section class="mb-5">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="mb-0">7. Галерея изображений</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <img id="mainImage" src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=600&auto=format&fit=crop" 
+                                 class="img-fluid rounded" alt="Главное изображение">
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Миниатюры</h5>
+                            <div class="d-grid gap-2">
+                                <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=150&auto=format&fit=crop" 
+                                     class="img-thumbnail" onclick="changeMainImage(this.src)" alt="Телефон">
+                                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=150&auto=format&fit=crop" 
+                                     class="img-thumbnail" onclick="changeMainImage(this.src)" alt="Ноутбук">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=150&auto=format&fit=crop" 
+                                     class="img-thumbnail" onclick="changeMainImage(this.src)" alt="Наушники">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">© 2025 ElectroStore. Демонстрация всех функций веб-приложения.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+<script>
+// Demo-specific JavaScript functions
+let clickCount = 0;
+let currentStep = 1;
+
+// DOM Manipulation functions
+function changeText() {
+    const element = document.getElementById('dynamicText');
+    const texts = [
+        'Этот текст можно изменить',
+        'Текст был изменен!',
+        'Еще одно изменение',
+        'И снова другой текст',
+        'Финальное изменение'
+    ];
+    const currentText = element.textContent;
+    const currentIndex = texts.indexOf(currentText);
+    const nextIndex = (currentIndex + 1) % texts.length;
+    element.textContent = texts[nextIndex];
+    element.classList.add('fade-in');
+    setTimeout(() => element.classList.remove('fade-in'), 500);
+    ElectroStoreApp.playSound('click');
+}
+
+function changeStyles() {
+    const element = document.getElementById('styleBox');
+    const styles = [
+        { bg: 'bg-primary', text: 'text-white' },
+        { bg: 'bg-success', text: 'text-white' },
+        { bg: 'bg-warning', text: 'text-dark' },
+        { bg: 'bg-danger', text: 'text-white' },
+        { bg: 'bg-light', text: 'text-dark' }
+    ];
+    
+    const currentBg = element.className.match(/bg-\w+/);
+    const currentText = element.className.match(/text-\w+/);
+    const currentStyle = { 
+        bg: currentBg ? currentBg[0] : 'bg-light', 
+        text: currentText ? currentText[0] : 'text-dark' 
+    };
+    
+    const currentIndex = styles.findIndex(s => s.bg === currentStyle.bg);
+    const nextIndex = (currentIndex + 1) % styles.length;
+    const nextStyle = styles[nextIndex];
+    
+    element.className = `p-3 ${nextStyle.bg} ${nextStyle.text} border rounded`;
+    element.style.transform = 'scale(1.05)';
+    setTimeout(() => element.style.transform = 'scale(1)', 200);
+    ElectroStoreApp.playSound('toggle');
+}
+
+// Event handling functions
+document.getElementById('clickCounter').addEventListener('click', function() {
+    clickCount++;
+    this.textContent = `Кликов: ${clickCount}`;
+    this.style.transform = 'scale(1.1)';
+    setTimeout(() => this.style.transform = 'scale(1)', 200);
+    ElectroStoreApp.playSound('click');
+});
+
+document.getElementById('keyboardInput').addEventListener('keydown', function(e) {
+    document.getElementById('lastKey').textContent = e.key;
+    this.style.borderColor = '#0d6efd';
+    setTimeout(() => this.style.borderColor = '', 200);
+    ElectroStoreApp.playSound('click');
+});
+
+document.getElementById('actionSelect').addEventListener('change', function() {
+    const action = this.value;
+    let message, type;
+    
+    switch(action) {
+        case 'success':
+            message = 'Операция выполнена успешно!';
+            type = 'success';
+            break;
+        case 'warning':
+            message = 'Внимание! Проверьте данные.';
+            type = 'warning';
+            break;
+        case 'error':
+            message = 'Произошла ошибка!';
+            type = 'error';
+            break;
+        default:
+            return;
+    }
+    
+    ElectroStoreApp.showNotification(message, type);
+    ElectroStoreApp.playSound(type);
+});
+
+// Advanced JS functions
+function showProductStats() {
+    const stats = ProductManager.getProductStats();
+    const container = document.getElementById('productStats');
+    container.innerHTML = `
+        <div class="alert alert-info">
+            <h6>Статистика товаров:</h6>
+            <ul class="mb-0">
+                <li>Всего товаров: ${stats.totalProducts}</li>
+                <li>Общая стоимость: ${stats.totalValue.toLocaleString()} ₽</li>
+                <li>Средний рейтинг: ${stats.averageRating}</li>
+                <li>Категории: ${stats.categories.join(', ')}</li>
+            </ul>
+        </div>
+    `;
+    container.classList.add('fade-in');
+    ElectroStoreApp.playSound('success');
+}
+
+function demonstrateHigherOrder() {
+    const container = document.getElementById('higherOrderDemo');
+    const expensiveProducts = ProductManager.mapToDisplayFormat(
+        ProductManager.products.filter(p => p.price > 50000)
+    );
+    
+    container.innerHTML = `
+        <div class="alert alert-warning">
+            <h6>Дорогие товары (используя filter и map):</h6>
+            <ul class="mb-0">
+                ${expensiveProducts.map(p => `<li>${p.name} - ${p.displayPrice}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+    container.classList.add('slide-in-left');
+    ElectroStoreApp.playSound('success');
+}
+
+// Animation functions
+function animateElement(animationType) {
+    const element = document.getElementById('animationTarget');
+    AnimationManager.applyAnimation(element, animationType);
+    ElectroStoreApp.playSound('click');
+}
+
+// Sound effects
+function playSoundEffect(type) {
+    ElectroStoreApp.playSound(type);
+}
+
+// Multi-step form functions
+function nextStep() {
+    if (currentStep < 3) {
+        document.getElementById(`step${currentStep}`).style.display = 'none';
+        currentStep++;
+        document.getElementById(`step${currentStep}`).style.display = 'block';
+        document.getElementById(`step${currentStep}`).classList.add('fade-in');
+        ElectroStoreApp.playSound('success');
+    }
+}
+
+function prevStep() {
+    if (currentStep > 1) {
+        document.getElementById(`step${currentStep}`).style.display = 'none';
+        currentStep--;
+        document.getElementById(`step${currentStep}`).style.display = 'block';
+        document.getElementById(`step${currentStep}`).classList.add('fade-in');
+        ElectroStoreApp.playSound('toggle');
+    }
+}
+
+// Image gallery function
+function changeMainImage(src) {
+    const mainImage = document.getElementById('mainImage');
+    mainImage.src = src;
+    mainImage.classList.add('fade-in');
+    setTimeout(() => mainImage.classList.remove('fade-in'), 500);
+    ElectroStoreApp.playSound('click');
+}
+
+// Form submission
+document.getElementById('multiStepForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const summary = document.getElementById('formSummary');
+    
+    summary.innerHTML = `
+        <h6>Сводка формы:</h6>
+        <p><strong>Имя:</strong> ${formData.get('name')}</p>
+        <p><strong>Email:</strong> ${formData.get('email')}</p>
+        <p><strong>Категория:</strong> ${formData.get('category')}</p>
+        <p><strong>Бюджет:</strong> ${formData.get('budget')} ₽</p>
+    `;
+    
+    ElectroStoreApp.showNotification('Форма успешно отправлена!', 'success');
+    ElectroStoreApp.playSound('success');
+});
+
+// Initialize demo
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Demo page loaded with all features!');
+});
+</script>
+</body>
+</html>

@@ -4,39 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ElectroStore — Responsive Bootstrap Showcase</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <!-- <style>
-        /* Hero section custom gradient */
-.hero-section {
-    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
-}
 
-/* Responsive heading for hero */
-.responsive-heading {
-    font-size: calc(1.5rem + 2.5vw);
-}
-
-@media (min-width: 992px) {
-    .responsive-heading {
-        font-size: 3.5rem;
-    }
-}
-
-/* Ensure footer sticks to bottom on short pages */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-}
-
-
-    </style> -->
 </head>
 <body class="bg-body-tertiary">
 <header>
@@ -51,6 +21,7 @@ main {
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Главная</a></li>
                     <li class="nav-item"><a class="nav-link" href="products.html">Каталог</a></li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="demo.html">Демо функций</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
                 </ul>
@@ -72,23 +43,79 @@ main {
                     <h1 class="display-5 fw-bold responsive-heading">Интернет-магазин электроники будущего</h1>
                     <p class="lead mb-4">Выбирайте гаджеты для работы и удовольствия в одном месте. Используем современный Bootstrap 5, чтобы сайт выглядел отлично на любом устройстве.</p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a class="btn btn-primary btn-lg" href="#">Перейти в каталог</a>
-                        <a class="btn btn-outline-light btn-lg" href="#">Запросить консультацию</a>
+                        <a class="btn btn-primary btn-lg" href="products.html">Перейти в каталог</a>
+                        <a class="btn btn-outline-light btn-lg" href="contact.html">Запросить консультацию</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="ratio ratio-4x3 rounded-4 overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1593305625442-30a8c232ec69?q=80&w=2070&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Посетитель магазина тестирует VR-шлем">
+                        <img src="main.jpg" class="w-100 h-100 object-fit-cover" alt="Посетитель магазина тестирует VR-шлем">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Language Selector Section -->
+    <section class="py-4 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h3 class="mb-0">Выберите язык / Choose Language / Тілді таңдаңыз</h3>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="btn-group" role="group" aria-label="Language selector">
+                        <button type="button" class="btn btn-outline-light active" data-lang="ru">Русский</button>
+                        <button type="button" class="btn btn-outline-light" data-lang="en">English</button>
+                        <button type="button" class="btn btn-outline-light" data-lang="kk">Қазақша</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Feed Section -->
     <section class="py-5 bg-light">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-semibold">Популярные устройства</h2>
+                <h2 class="fw-semibold" data-translate="news_title">Новости технологий</h2>
+                <div class="btn-group mt-3" role="group" aria-label="News categories">
+                    <button type="button" class="btn btn-primary active" data-category="all" data-translate="all_news">Все новости</button>
+                    <button type="button" class="btn btn-outline-primary" data-category="tech" data-translate="technology">Технологии</button>
+                    <button type="button" class="btn btn-outline-primary" data-category="gadgets" data-translate="gadgets">Гаджеты</button>
+                    <button type="button" class="btn btn-outline-primary" data-category="ai" data-translate="ai">ИИ</button>
+                </div>
+            </div>
+            <div id="newsContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Dynamic Greeting Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="fw-semibold mb-4" data-translate="greeting_title">Персональное приветствие</h2>
+                    <div class="mb-4">
+                        <input type="text" id="userName" class="form-control form-control-lg" placeholder="Введите ваше имя" data-translate-placeholder="enter_name">
+                    </div>
+                    <button id="greetButton" class="btn btn-primary btn-lg mb-4" data-translate="greet_me">Поприветствовать меня</button>
+                    <div id="greetingMessage" class="alert alert-info" style="display: none;">
+                        <h4 id="greetingText"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Rating Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-semibold" data-translate="rate_products">Оцените наши товары</h2>
+                <p class="text-muted" data-translate="rate_description">Кликните на звезду, чтобы поставить оценку</p>
             </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                 <div class="col">
@@ -96,6 +123,13 @@ main {
                         <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Смартфон Pro X">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title h5">Смартфон Pro X</h3>
+                            <div class="rating-stars mb-3" data-product="phone">
+                                <i class="bi bi-star" data-rating="1"></i>
+                                <i class="bi bi-star" data-rating="2"></i>
+                                <i class="bi bi-star" data-rating="3"></i>
+                                <i class="bi bi-star" data-rating="4"></i>
+                                <i class="bi bi-star" data-rating="5"></i>
+                            </div>
                             <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
                                 <span class="fw-semibold fs-5 text-primary">75 000 ₽</span>
                                 <a href="#" class="btn btn-sm btn-primary">Купить</a>
@@ -108,6 +142,13 @@ main {
                         <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1926&auto=format&fit=crop" class="card-img-top" alt="Ноутбук UltraBook 15">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title h5">Ноутбук UltraBook 15</h3>
+                            <div class="rating-stars mb-3" data-product="laptop">
+                                <i class="bi bi-star" data-rating="1"></i>
+                                <i class="bi bi-star" data-rating="2"></i>
+                                <i class="bi bi-star" data-rating="3"></i>
+                                <i class="bi bi-star" data-rating="4"></i>
+                                <i class="bi bi-star" data-rating="5"></i>
+                            </div>
                             <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
                                 <span class="fw-semibold fs-5 text-primary">120 000 ₽</span>
                                 <a href="#" class="btn btn-sm btn-primary">Купить</a>
@@ -120,10 +161,48 @@ main {
                         <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2070&auto=format&fit=crop" class="card-img-top" alt="Наушники SoundWave">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title h5">Наушники SoundWave</h3>
+                            <div class="rating-stars mb-3" data-product="headphones">
+                                <i class="bi bi-star" data-rating="1"></i>
+                                <i class="bi bi-star" data-rating="2"></i>
+                                <i class="bi bi-star" data-rating="3"></i>
+                                <i class="bi bi-star" data-rating="4"></i>
+                                <i class="bi bi-star" data-rating="5"></i>
+                            </div>
                             <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
                                 <span class="fw-semibold fs-5 text-primary">15 000 ₽</span>
                                 <a href="#" class="btn btn-sm btn-primary">Купить</a>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-semibold" data-translate="interactive_features">Интерактивные функции</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title" data-translate="time_display">Текущее время</h5>
+                            <p class="card-text" data-translate="time_description">Нажмите кнопку, чтобы увидеть текущее время</p>
+                            <button id="showTimeBtn" class="btn btn-primary mb-3" data-translate="show_time">Показать время</button>
+                            <div id="timeDisplay" class="alert alert-info" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <h5 class="card-title" data-translate="random_fact">Случайный факт</h5>
+                            <p class="card-text" data-translate="fact_description">Получите интересный факт о технологиях</p>
+                            <button id="randomFactBtn" class="btn btn-success mb-3" data-translate="get_fact">Получить факт</button>
+                            <div id="factDisplay" class="alert alert-success" style="display: none;"></div>
                         </div>
                     </div>
                 </div>
@@ -208,8 +287,8 @@ main {
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
             <p class="mb-0">© 2025 ElectroStore. Команда: Mirzan Mysyrgaliev, Abylaikhan.</p>
             <div class="d-flex align-items-center gap-3">
-                <span id="datetime" class="small"></span>
-                <button id="color-changer" class="btn btn-sm btn-outline-light" title="Сменить тему">
+                <span id="datetime" class="small" data-live-datetime="datetime"></span>
+                <button id="color-changer" class="btn btn-sm btn-outline-light" title="Сменить тему" data-theme-toggle>
                     <i class="bi bi-palette-fill"></i>
                 </button>
             </div>
@@ -226,7 +305,7 @@ main {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form id="subscribeForm" class="needs-validation" novalidate>
+        <form id="subscribeForm" class="needs-validation" novalidate data-success-message="Вы успешно подписались на рассылку!">
             <div class="mb-3">
                 <label for="subscribeName" class="form-label">Имя</label>
                 <input type="text" class="form-control" id="subscribeName" required>

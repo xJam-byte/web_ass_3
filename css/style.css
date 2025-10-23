@@ -271,3 +271,164 @@ body.blog-page {
     font-size: 3.5rem;
   }
 }
+
+.product-card-animated {
+  animation: fade-in-up 0.35s ease both;
+}
+
+.cart-row-animated {
+  animation: fade-in-up 0.3s ease both;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rating Stars Styles */
+.rating-stars {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+}
+
+.rating-stars i {
+  font-size: 1.2rem;
+  color: #dee2e6;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rating-stars i:hover,
+.rating-stars i.active {
+  color: #ffc107;
+  transform: scale(1.1);
+}
+
+/* Language Selector Styles */
+.btn-group .btn.active {
+  background-color: #fff;
+  color: #0d6efd;
+  border-color: #fff;
+}
+
+/* News Card Styles */
+.news-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fade-in-up 0.5s ease both;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.news-card .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Interactive Elements */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.5s ease-out;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.bounce-in {
+  animation: bounceIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Theme Toggle Animation */
+.theme-transition {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Loading Animation */
+.loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}

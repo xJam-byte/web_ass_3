@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-bs-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +11,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" aria-label="Основная навигация">
         <div class="container">
-            <a class="navbar-brand text-uppercase fw-semibold" href="blog.html">ElectroStore</a>
+            <a class="navbar-brand text-uppercase fw-semibold" href="index.html">ElectroStore</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,7 +31,12 @@
         </div>
     </nav>
 </header>
-<button id="themeBtn" class="btn btn-primary" style="font-size: 24px;">светлая тема</button>
+<button id="themeBtn" class="btn btn-primary position-fixed bottom-0 start-0 m-3" style="font-size: 24px;"
+    data-theme-toggle
+    data-theme-icon-dark="🌙"
+    data-theme-label-dark="Темная тема"
+    data-theme-icon-light="🌞"
+    data-theme-label-light="Светлая тема">🌙 Темная тема</button>
 <main>
     <section class="py-5">
         <div class="container">
@@ -59,7 +64,7 @@
                     <div class="card shadow-sm">
                         <div class="card-body p-4 p-md-5">
                             <h2 class="h4 fw-semibold mb-3">Форма обратной связи</h2>
-                            <form class="row g-3" aria-label="Форма обратной связи">
+                            <form class="row g-3 needs-validation" aria-label="Форма обратной связи" novalidate data-success-message="Спасибо! Мы свяжемся с вами в ближайшее время.">
                                 <div class="col-md-6">
                                     <label for="contactName" class="form-label">Имя</label>
                                     <input type="text" class="form-control" id="contactName" placeholder="Айгерим" required>
