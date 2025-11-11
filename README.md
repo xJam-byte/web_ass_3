@@ -4,15 +4,15 @@
 
 ## Команда и роли
 - Nurkasym — каталог (products.html), поиск/фильтры, сравнение.
-- Abzal — профиль (profile.html).
+- Abzal — корзина, галерея
 - Mirzan — карточки товара (product-detail.html), корзина/чекаут.
 - Abylaikhan — главная/о нас/контакты, анимации, тема и i18n.
 
 ## Страницы (минимум по 2 на участника)
-- Nurkasym: products.html, compare.html
-- Abzal: login.html, signup.html, profile.html
-- Mirzan: product-detail.html, cart.html, checkout.html
-- Abylaikhan: index.html, about.html, contact.html, gallery.html
+- Nurkasym: products.html, about.html
+- Abzal: cart.html, gallery.html
+- Mirzan: product-detail.html,  checkout.html
+- Abylaikhan: index.html,  contact.html, 
 
 ## Соответствие требованиям
 1) Responsiveness (10) — Bootstrap 5 Grid + кастомные медиазапросы (css/style.css).  
