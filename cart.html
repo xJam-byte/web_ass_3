@@ -1,181 +1,261 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Корзина — ElectroStore</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="bg-body-tertiary">
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" aria-label="Основная навигация">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body class="bg-body-tertiary">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top"
+        aria-label="Основная навигация"
+      >
         <div class="container">
-            <a class="navbar-brand text-uppercase fw-semibold" href="blog.html">ElectroStore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Каталог</a></li>
-                    <li class="nav-item"><a class="nav-link" href="gallery.html">Галерея</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
-                </ul>
-                <div class="d-flex flex-wrap gap-2 ms-lg-4 pt-3 pt-lg-0">
-                    <a class="btn btn-outline-light active" aria-current="page" href="cart.html">Корзина</a>
-                    <a class="btn btn-primary" href="checkout.html">Оформить заказ</a>
-                </div>
+          <a class="navbar-brand text-uppercase fw-semibold" href="index.html"
+            >ElectroStore</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Переключатель навигации"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="index.html"
+                  data-translate="home"
+                  >Главная</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="products.html"
+                  data-translate="catalog"
+                  >Каталог</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html" data-translate="gallery"
+                  >Галерея</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" data-translate="about"
+                  >О нас</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html" data-translate="contact"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2 ms-lg-3 pt-3 pt-lg-0">
+              <!-- Language Selector -->
+              <div
+                class="btn-group btn-group-sm"
+                role="group"
+                aria-label="Language selector"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  data-lang="ru"
+                >
+                  РУ
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  data-lang="en"
+                >
+                  EN
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  data-lang="kk"
+                >
+                  KK
+                </button>
+              </div>
+
+              <!-- Theme Toggle -->
+              <button
+                class="btn btn-outline-light"
+                data-theme-toggle
+                title="Сменить тему"
+              >
+                <i class="bi bi-palette-fill"></i>
+              </button>
+
+              <a
+                class="btn btn-outline-light"
+                href="cart.html"
+                data-translate="cart"
+                >Корзина</a
+              >
+              <a
+                class="btn btn-primary"
+                href="checkout.html"
+                data-translate="checkout"
+                >Оформить заказ</a
+              >
             </div>
+          </div>
         </div>
-    </nav>
-</header>
-<button id="themeBtn" class="btn btn-outline-warning" style="font-size: 24px;">🌞</button>
+      </nav>
+    </header>
 
-
-<script>
-function updateDateTime() {
-  const now = new Date();
-  document.getElementById("datetime").textContent = now.toLocaleString();
-}
-
-setInterval(updateDateTime, 1000); 
-updateDateTime();
-</script>
-
-<main>
-    <section class="py-5">
+    <main>
+      <section class="py-5" data-cart-root>
         <div class="container">
-            <div class="row g-4">
-                <div class="col-12 col-lg-8">
-                    <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <h1 class="h4 fw-semibold mb-4">Корзина</h1>
-                            <div class="table-responsive">
-                                <table class="table align-middle">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Товар</th>
-                                            <th scope="col" class="text-center">Количество</th>
-                                            <th scope="col" class="text-end">Цена</th>
-                                            <th scope="col" class="text-end">Сумма</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <img src="iphonex.jpg" class="rounded" width="302" height="72" alt="Iphone X">
-                                                    <div>
-                                                        <h2 class="h6 mb-1">Iphone X</h2>
-                                                        <p class="text-muted small mb-0">Память 64ГБ, цвет белый,состояние ляля</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="btn-group" role="group" aria-label="Количество смартфонов">
-                                                    <button class="btn btn-outline-primary btn-sm " type="button">-</button>
-                                                    <button class="btn btn-outline-primary btn-sm" type="button" disabled>1</button>
-                                                    <button class="btn btn-outline-primary btn-sm" type="button">+</button>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">72 000 тг</td>
-                                            <td class="text-end">72 000 тг</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <div class="d-flex align-items-center gap-3">
-                                                    <img src="yanss.jpg" class="rounded" width="302" height="72" alt="Наушники SoundWave">
-                                                    <div>
-                                                        <h2 class="h6 mb-1">Наушники SoundWave</h2>
-                                                        <p class="text-muted small mb-0">Цвет розовый,шумоподавление</p>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div class="btn-group" role="group" aria-label="Количество наушников">
-                                                    <button class="btn btn-outline-primary btn-sm" type="button">-</button>
-                                                    <button class="btn btn-outline-primary btn-sm" type="button" disabled>4</button>
-                                                    <button class="btn btn-outline-primary btn-sm" type="button">+</button>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">15 000 тг</td>
-                                            <td class="text-end">30 000 тг</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <a class="btn btn-outline-primary" href="products.html">Продолжить покупки</a>
-                        </div>
+          <div class="row g-4">
+            <div class="col-12 col-lg-8">
+              <div class="card shadow-sm h-100">
+                <div class="card-body p-4 p-md-5">
+                  <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4"
+                  >
+                    <div>
+                      <span class="badge text-bg-primary mb-2"
+                        >Ваша корзина</span
+                      >
+                      <h1 class="h4 fw-semibold mb-0">
+                        Товары в ожидании заказа
+                      </h1>
                     </div>
+                    <span class="text-muted small"
+                      >Позиции: <strong data-cart-count>0</strong></span
+                    >
+                  </div>
+
+                  <div class="table-responsive">
+                    <table class="table align-middle">
+                      <thead>
+                        <tr>
+                          <th scope="col">Товар</th>
+                          <th scope="col" class="text-center">Количество</th>
+                          <th scope="col" class="text-end">Цена</th>
+                          <th scope="col" class="text-end">Сумма</th>
+                        </tr>
+                      </thead>
+                      <tbody data-cart-body></tbody>
+                    </table>
+                  </div>
+
+                  <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a class="btn btn-outline-primary" href="products.html"
+                      >Продолжить покупки</a
+                    >
+                    <button
+                      class="btn btn-outline-secondary ms-auto"
+                      type="button"
+                      data-cart-clear
+                    >
+                      Очистить корзину
+                    </button>
+                  </div>
                 </div>
-                <div class="col-12 col-lg-4 ">
-                    <div class="card shadow-sm">
-                        <div class="card-body p-4">
-                            <h2 class="h5 fw-semibold">Итог заказа</h2>
-                            <div class="d-flex justify-content-between text-muted">
-                                <span>Сумма товаров</span>
-                                <span>102 000 тг</span>
-                            </div>
-                            <div class="d-flex justify-content-between text-muted">
-                                <span>Доставка</span>
-                                <span>Бесплатно</span>
-                            </div>
-                            <hr>
-                            <div class="d-flex justify-content-between fw-semibold fs-5">
-                                <span>Итого</span>
-                                <span>102 000 тг</span>
-                            </div>
-                            <button class="btn btn-success w-100 mt-4 " type="button" onclick="location.href='checkout.html'">Перейти к оформлению</button>
-                            <p class="small text-muted mt-3">При оформлении заказа можно указать промокод и выбрать удобный способ доставки.</p>
-                        </div>
-                    </div>
-                     <div class="col-12  col-lg-12 ">
-                                <div class="card shadow-sm, mt-4">
-                                    <div class="card-body">
-                                        <h3 class="text-center">current time</h3>
-                                        <p class="text-center" id="datetime"></p>
-                                    </div>
-                                </div>   
-                            </div>
-                     
-                </div>
+              </div>
             </div>
+
+            <div class="col-12 col-lg-4">
+              <div class="card shadow-sm">
+                <div class="card-body p-4 p-md-5">
+                  <h2 class="h5 fw-semibold mb-3">Итог заказа</h2>
+                  <ul class="list-group list-group-flush">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center px-0"
+                    >
+                      <span>Сумма товаров</span>
+                      <span data-cart-subtotal>0 ₽</span>
+                    </li>
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center px-0"
+                    >
+                      <span>Доставка</span>
+                      <span data-cart-shipping>Бесплатно</span>
+                    </li>
+                  </ul>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <span class="fw-semibold">Итого</span>
+                    <span class="fw-semibold fs-5 text-primary" data-cart-total
+                      >0 ₽</span
+                    >
+                  </div>
+                  <button
+                    class="btn btn-success w-100 mt-4"
+                    type="button"
+                    onclick="location.href='checkout.html'"
+                  >
+                    Перейти к оформлению
+                  </button>
+                  <p class="small text-muted mt-3 mb-4">
+                    Добавьте промокод при оформлении и выберите удобный способ
+                    доставки.
+                  </p>
+
+                  <div
+                    class="rounded-3 bg-body-tertiary border d-flex flex-column gap-1 p-3"
+                  >
+                    <span class="small text-muted text-uppercase"
+                      >Текущее время</span
+                    >
+                    <span
+                      class="fw-semibold"
+                      id="datetime"
+                      data-live-datetime="seconds"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-       
-</div>
-    </section>
+      </section>
     </main>
 
-
-<footer class="bg-dark text-white py-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-        <p class="mb-0">© 2025 ElectroStore. Корзина.</p>
+    <footer class="bg-dark text-white py-4">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+      >
+        <p class="mb-0">
+          © 2025 ElectroStore. Корзина. Команда:Nurkasym, Abzal, Mirzan,
+          Abylaikhan
+        </p>
+        <p>Текущее время: <span id="current-time"></span></p>
         <p class="mb-0">Страница: Abzal Bakhytov</p>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-p8AwQ7P7B6AEZrum1+qsSVqS+8CA0nVddO+jXS6AMDttuPAHyBs+K6TfGsDz94bQ" crossorigin="anonymous"></script>
-
-<script>
-let isLight = true;
-
-function changeTheme() {
-  const body = document.body;
-  const btn = document.getElementById("themeBtn");
-  const color = isLight ? "#1e1e1e" : "#ffffff";  
-  const text = isLight ? "#ffffff" : "#000000";   
-  const icon = isLight ? "🌙" : "🌞";              
-
-  body.style.setProperty("background-color", color, "important");
-  body.style.setProperty("color", text, "important");
-
-  btn.textContent = icon;
-  isLight = !isLight;
-}
-
-document.getElementById("themeBtn").addEventListener("click", changeTheme);
-</script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
 </html>

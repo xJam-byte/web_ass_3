@@ -1,94 +1,211 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Галерея — ElectroStore</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="bg-body-tertiary">
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top" aria-label="Основная навигация">
+<html lang="ru" data-bs-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Галерея - ElectroStore</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body class="bg-body-tertiary">
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm sticky-top"
+      >
         <div class="container">
-            <a class="navbar-brand text-uppercase fw-semibold" href="blog.html">ElectroStore</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Переключатель навигации">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                    <li class="nav-item"><a class="nav-link" href="products.html">Каталог</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="gallery.html">Галерея</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Контакты</a></li>
-                </ul>
-                <div class="d-flex flex-wrap gap-2 ms-lg-4 pt-3 pt-lg-0">
-                    <a class="btn btn-outline-light" href="cart.html">Корзина</a>
-                    <a class="btn btn-primary" href="checkout.html">Оформить заказ</a>
-                </div>
+          <a class="navbar-brand text-uppercase fw-semibold" href="index.html"
+            >ElectroStore</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" data-translate="home"
+                  >Главная</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="products.html"
+                  data-translate="catalog"
+                  >Каталог</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  href="gallery.html"
+                  data-translate="gallery"
+                  >Галерея</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" data-translate="about"
+                  >О нас</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html" data-translate="contact"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+            <div class="d-flex flex-wrap gap-2 ms-lg-3 pt-3 pt-lg-0">
+              <div
+                class="btn-group btn-group-sm"
+                role="group"
+                aria-label="Language selector"
+              >
+                <button
+                  type="button"
+                  class="btn btn-outline-light active"
+                  data-lang="ru"
+                >
+                  РУ
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  data-lang="en"
+                >
+                  EN
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-outline-light"
+                  data-lang="kk"
+                >
+                  KK
+                </button>
+              </div>
+              <button
+                class="btn btn-outline-light"
+                data-theme-toggle
+                title="Сменить тему"
+              >
+                <i class="bi bi-palette-fill"></i>
+              </button>
+              <a
+                class="btn btn-outline-light"
+                href="cart.html"
+                data-translate="cart"
+                >Корзина</a
+              >
+              <a
+                class="btn btn-primary"
+                href="checkout.html"
+                data-translate="checkout"
+                >Оформить заказ</a
+              >
             </div>
+          </div>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-    <section class="py-5">
+    <main>
+      <section class="py-5">
         <div class="container">
-            <div class="text-center mb-5">
-                <span class="badge text-bg-primary mb-2">Галерея</span>
-                <h1 class="fw-semibold">Визуальные истории ElectroStore</h1>
-                <p class="text-muted">Коллекция фотографий демонстрирует технику, которую мы тестируем. Bootstrap Grid помогает адаптировать галерею под любой экран.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
-                        <img src="https://picsum.photos/seed/gallery1/800/600" class="w-100 object-fit-cover" alt="Ноутбук на рабочем столе">
-                        <figcaption class="p-3 bg-white">Рабочее место разработчика</figcaption>
-                    </figure>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
-                        <img src="игра.jpg" class="w-100 object-fit-cover" alt="Игровая приставка с контроллерами">
-                        <figcaption class="p-3 bg-white">Игровая зона с подсветкой</figcaption>
-                    </figure>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
-                        <img src="аксессуар.jpg" class="w-100 object-fit-cover" alt="Умные часы на руке">
-                        <figcaption class="p-3 bg-white">Умные аксессуары для спорта</figcaption>
-                    </figure>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
-                        <img src="вроче.jpg" class="w-100 object-fit-cover" alt="Виртуальная реальность">
-                        <figcaption class="p-3 bg-white">Тестируем VR-шлемы</figcaption>
-                    </figure>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
-                        <img src="https://picsum.photos/seed/gallery5/800/600" class="w-100 object-fit-cover" alt="Планшет на столе">
-                        <figcaption class="p-3 bg-white">Гибриды для творчества</figcaption>
-                    </figure>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <figure class="rounded-4 overflow-hidden shadow-sm h-100">
-                        <img src="камера.jpg" class="w-100 object-fit-cover" alt="Пользователь тестирует смартфон">
-                        <figcaption class="p-3 bg-white">Тесты камер и автономности</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+          <h1 class="mb-5">Галерея товаров</h1>
 
-<footer class="bg-dark text-white py-4">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-        <p class="mb-0">© 2025 ElectroStore. Галерея.</p>
-        <p class="mb-0">Команда: Mirzan Mysyrgaliev</p>
+          <!-- Search and Filter Section -->
+          <div class="mb-5">
+            <div class="row g-3 mb-4">
+              <div class="col-md-6">
+                <input
+                  type="text"
+                  id="gallerySearch"
+                  class="form-control"
+                  placeholder="Поиск по названию..."
+                />
+              </div>
+              <div class="col-md-6">
+                <select id="galleryFilter" class="form-select">
+                  <option value="all">Все категории</option>
+                  <option value="phones">Смартфоны</option>
+                  <option value="laptops">Ноутбуки</option>
+                  <option value="accessories">Аксессуары</option>
+                  <option value="tablets">Планшеты</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Highlight Search -->
+            <div class="card">
+              <div class="card-body">
+                <label class="form-label">Подсветка поиска</label>
+                <input
+                  type="text"
+                  id="highlightSearch"
+                  class="form-control"
+                  placeholder="Введите текст для выделения..."
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Gallery Grid -->
+          <div
+            id="galleryContainer"
+            class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 g-4"
+          >
+            <!-- Gallery items will be loaded here -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Фото</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <img id="modalImage" src="" alt="" class="img-fluid" />
+            <p id="modalDescription" class="mt-3"></p>
+          </div>
+        </div>
+      </div>
     </div>
-</footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" ></script>
-</body>
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"
+        >
+          <p class="mb-0">© 2025 ElectroStore</p>
+          <span id="datetime" class="small"></span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
 </html>
