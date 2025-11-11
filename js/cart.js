@@ -19,7 +19,7 @@ $(document).ready(function () {
     items: [
       {
         id: 1,
-        name: "Смартфон Pro X",
+        title: "Смартфон Pro X",
         price: 75000,
         quantity: 1,
         rating: 5,
@@ -28,7 +28,7 @@ $(document).ready(function () {
       },
       {
         id: 2,
-        name: "Ноутбук UltraBook 15",
+        title: "Ноутбук UltraBook 15",
         price: 120000,
         quantity: 1,
         rating: 5,
