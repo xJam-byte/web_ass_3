@@ -4,7 +4,7 @@
 
 ## Команда и роли
 - Nurkasym — каталог (products.html), поиск/фильтры, сравнение.
-- Abzal — авторизация, профиль (profile.html).
+- Abzal — профиль (profile.html).
 - Mirzan — карточки товара (product-detail.html), корзина/чекаут.
 - Abylaikhan — главная/о нас/контакты, анимации, тема и i18n.
 
